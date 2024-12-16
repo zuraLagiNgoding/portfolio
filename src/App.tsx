@@ -13,6 +13,7 @@ import hightlightImage from "./img/highlight.png";
 import React from "react";
 import clsx from "clsx";
 import { XIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface ProjectType {
   thumbnail: string;
@@ -26,6 +27,45 @@ function App() {
   const [selectedProject, setSelectedProject] = React.useState<ProjectType>();
   const expertiseRef = React.useRef<HTMLImageElement>(null);
   const contactRef = React.useRef<HTMLDivElement>(null);
+
+  const fade = {
+    initial: {
+      filter: "blur(50px)",
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      filter: "blur(0px)",
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.75,
+      },
+    },
+  };
+
+  const projectAnimate = {
+    blury: {
+      filter: "blur(50px)",
+      opacity: 0,
+      y: 100,
+    },
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: (index: number) => {
+      return {
+        filter: "blur(0px)",
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: 0.1 * index,
+          duration: 0.5,
+        },
+      };
+    },
+  };
 
   return (
     <div className="relative  text-primary overflow-x-hidden ">
@@ -107,10 +147,20 @@ function App() {
           </button>
         </div>
         <div className="flex flex-col gap-8 justify-end px-4 md:px-[8rem] py-[12rem]">
-          <div className="md:w-full flex justify-end md:mb-[15rem] text-6xl md:text-6xl xl:text-8xl font-medium ">
+          <motion.div
+            variants={fade}
+            initial={{ opacity: 0, y: 40, filter: "blur(20px)" }}
+            whileInView="animate"
+            className="md:w-full flex justify-end md:mb-[15rem] text-6xl md:text-6xl xl:text-8xl font-medium "
+          >
             <h1>Fullstack Developer</h1>
-          </div>
-          <div className="flex xl:flex-row flex-col xl:items-end gap-8">
+          </motion.div>
+          <motion.div
+            variants={fade}
+            whileInView="animate"
+            initial="initial"
+            className="flex xl:flex-row flex-col xl:items-end gap-8"
+          >
             <h1 className="md:text-6xl xl:text-8xl text-3xl font-medium xl:w-1/2">
               Maliki Azis Azyura
             </h1>
@@ -120,10 +170,13 @@ function App() {
               something amazing together! */}
               To deliver exceptional web development solutions by combining
               technical expertise with creative design, fostering digital
-              transformation and driving business growth. Checkout my work.
+              transformation and driving business growth. Checkout my work!
             </p>
-          </div>
-          <button
+          </motion.div>
+          <motion.button
+            variants={fade}
+            initial={{ opacity: 0, y: 40, filter: "blur(20px)" }}
+            whileInView="animate"
             className="flex gap-2 md:text-2xl text-lg font-extralight items-center"
             onClick={() => {
               if (expertiseRef.current) {
@@ -135,7 +188,7 @@ function App() {
           >
             Read more
             <ArrowRight />
-          </button>
+          </motion.button>
         </div>
       </div>
       <img
@@ -146,19 +199,87 @@ function App() {
       <div className="flex flex-col relative md:pl-[8rem] md:pr-0 px-[2rem] py-[8rem] pb-[12rem]">
         <div className="relative space-y-4 z-10 w-full">
           <div className="flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
-            <h1 className="md:text-3xl text-xl font-medium">── Expertise</h1>
+            <motion.h1
+              variants={fade}
+              initial={{ opacity: 0, y: 40, filter: "blur(20px)" }}
+              whileInView="animate"
+              className="md:text-3xl text-xl font-medium"
+            >
+              ── Expertise
+            </motion.h1>
             <div className="flex items-center gap-3 md:text-2xl text-xl">
-              <RiJavascriptFill />
-              <BiLogoTypescript />
-              <RiReactjsFill />
-              <RiPhpLine />
-              <FaGit />
-              <RiNodejsLine />
-              <RiNextjsFill />
-              <FaLaravel />
+              <motion.div
+                variants={projectAnimate}
+                custom={0.5}
+                initial="blury"
+                whileInView="animate"
+              >
+                <RiJavascriptFill />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={1}
+                initial="blury"
+                whileInView="animate"
+              >
+                <BiLogoTypescript />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={1.5}
+                initial="blury"
+                whileInView="animate"
+              >
+                <RiReactjsFill />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={2}
+                initial="blury"
+                whileInView="animate"
+              >
+                <RiPhpLine />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={2.5}
+                initial="blury"
+                whileInView="animate"
+              >
+                <FaGit />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={3}
+                initial="blury"
+                whileInView="animate"
+              >
+                <RiNodejsLine />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={3.5}
+                initial="initial"
+                whileInView="animate"
+              >
+                <RiNextjsFill />
+              </motion.div>
+              <motion.div
+                variants={projectAnimate}
+                custom={4}
+                initial="initial"
+                whileInView="animate"
+              >
+                <FaLaravel />
+              </motion.div>
             </div>
           </div>
-          <p className="text-justify opacity-75 md:w-1/2">
+          <motion.p
+            variants={fade}
+            initial="initial"
+            whileInView="animate"
+            className="text-justify opacity-75 md:w-1/2"
+          >
             I excel in{" "}
             <span className="text-tertiary">
               turning ideas into functional and visually appealing web
@@ -166,7 +287,7 @@ function App() {
             </span>
             . My passion lies in crafting seamless user experiences and building
             efficient, scalable solutions with attention to detail.
-          </p>
+          </motion.p>
         </div>
         <div className="absolute top-0 left-0 w-full h-[110%] bg-background md:rotate-2" />
       </div>
@@ -177,7 +298,11 @@ function App() {
         <div className="grid grid-cols-12 mt-12 xl:gap-6 gap-3">
           {projects.map((item, index) => {
             return (
-              <div
+              <motion.div
+                variants={projectAnimate}
+                custom={index}
+                initial="initial"
+                whileInView="animate"
                 onClick={() => setSelectedProject(item)}
                 key={index}
                 className="w-full relative md:col-span-4 col-span-12 h-[18rem] xl:rounded-2xl rounded-lg overflow-hidden shadow-xl group cursor-pointer"
@@ -195,7 +320,7 @@ function App() {
                   alt={item.title}
                   className="w-full h-full absolute left-0 group-hover:scale-110 transition-all object-cover object-left"
                 />
-              </div>
+              </motion.div>
             );
           })}
         </div>
