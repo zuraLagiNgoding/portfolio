@@ -143,7 +143,7 @@ function App() {
               }
             }}
           >
-            Get in touch 👋
+            Get in touch
           </button>
         </div>
         <div className="flex flex-col gap-8 justify-end px-4 md:px-[8rem] py-[12rem]">
@@ -331,7 +331,7 @@ function App() {
             <p className="md:text-xl opacity-75">
               Got a question or need a partner up?
             </p>
-            <h1 className="text-7xl font-medium">Let's Talk 🤝</h1>
+            <h1 className="text-7xl font-medium">Let's Talk </h1>
           </div>
           <div>
             <div className="flex items-center gap-6">
