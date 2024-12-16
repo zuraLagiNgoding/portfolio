@@ -7,3 +7,14 @@
 * {
   font-family: "Rubik";
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    scroll-behavior: smooth;
+  }
+}
+
+*, html {
+  scroll-behavior: smooth !important;
+}
