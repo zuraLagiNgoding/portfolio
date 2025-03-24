@@ -17,13 +17,10 @@ import img42 from "../img/projects/42.png";
 import img43 from "../img/projects/43.png";
 import img5 from "../img/projects/5.png";
 import img51 from "../img/projects/51.png";
-import img52 from "../img/projects/52.png";
-import img53 from "../img/projects/53.png";
-import img54 from "../img/projects/54.png";
-import img55 from "../img/projects/55.png";
-import img6 from "../img/projects/6.png";
+import img7 from "../img/projects/7.png";
+import img71 from "../img/projects/71.png";
+import img72 from "../img/projects/72.png";
 import { BiLogoTypescript } from "react-icons/bi";
-import { FaFigma } from "react-icons/fa";
 import {
   RiJavascriptFill,
   RiNextjsFill,
@@ -70,6 +67,21 @@ export const projects = [
   },
   {
     id: 4,
+    title: "FIEMS ",
+    description:
+      "FIEMS is a comprehensive Enterprise Resource Planning (ERP) application designed to support and optimize various business operations. It provides integrated solutions for managing logistics, financial processes, human resources, and other essential company functions. With its scalable and adaptable features, FIEMS enables organizations to enhance efficiency, ensure data accuracy, and streamline workflows across multiple departments.",
+    thumbnail: img7,
+    images: [img71, img72],
+    techs: [
+      BiLogoTypescript,
+      RiReactjsFill,
+      RiNodejsLine,
+      RiTailwindCssFill,
+      SiMysql,
+    ],
+  },
+  {
+    id: 5,
     title: "Travel Ticket Booking",
     description:
       "A web-based application designed to simplify travel planning for Padang city tourism. This platform allows users to conveniently book tickets for various attractions and activities, enhancing their travel experience with seamless and efficient service.",
@@ -79,21 +91,12 @@ export const projects = [
     source_code: "https://github.com/zuraLagiNgoding/tiketwisata-padang",
   },
   {
-    id: 5,
+    id: 6,
     title: "GoUmrah - Admin",
     description:
       '"GoUmrah" is a mobile application by PT. Kabarhaji that revolutionizes the Umrah booking process by offering users a wide selection of flexible packages tailored to individual needs. My role in this project focuses on developing its comprehensive admin dashboard. The dashboard serves as the backbone of the application, allowing administrators to efficiently manage Umrah packages, track user bookings, monitor operational workflows, and send timely updates to users. By ensuring a seamless backend system, the admin dashboard contributes to enhancing user experience and maintaining the app’s operational excellence.',
     thumbnail: img5,
-    images: [img51, img52, img53, img54, img55],
+    images: [img51],
     techs: [BiLogoTypescript, RiReactjsFill, RiTailwindCssFill],
-  },
-  {
-    id: 6,
-    title: "Hotel Booking Website",
-    description:
-      "This project focuses on creating an intuitive and visually appealing user interface for a hotel booking web application. Emphasizing user-centric design, the platform offers seamless navigation, streamlined booking processes, and an engaging experience across devices. The design incorporates features such as personalized search filters, detailed room views, and easy payment integration to enhance usability and satisfaction.",
-    thumbnail: img6,
-    images: [],
-    techs: [FaFigma],
   },
 ];
