@@ -20,6 +20,10 @@ import img51 from "../img/projects/51.png";
 import img7 from "../img/projects/7.png";
 import img71 from "../img/projects/71.png";
 import img72 from "../img/projects/72.png";
+import img8 from "../img/projects/8.png";
+import img81 from "../img/projects/81.png";
+import img82 from "../img/projects/82.png";
+import img83 from "../img/projects/83.png";
 import { BiLogoTypescript } from "react-icons/bi";
 import {
   RiJavascriptFill,
@@ -28,6 +32,7 @@ import {
   RiReactjsFill,
   RiTailwindCssFill,
 } from "react-icons/ri";
+import { IoLogoElectron } from "react-icons/io5";
 
 export const projects = [
   {
@@ -98,5 +103,21 @@ export const projects = [
     thumbnail: img5,
     images: [img51],
     techs: [BiLogoTypescript, RiReactjsFill, RiTailwindCssFill],
+  },
+  {
+    id: 6,
+    title: "Nexa POS",
+    description:
+      "Nexa POS is a modern desktop application built with web technologies using Electron, designed specifically to empower micro, small, and medium enterprises (MSMEs). Tailored to support the daily operations of retail businesses, Nexa POS offers an intuitive and reliable point-of-sale system that streamlines sales and customer interactions. With its offline-first architecture and user-friendly design, Nexa POS is the perfect solution for growing businesses seeking a reliable, easy-to-use desktop POS system without the complexity of traditional software.",
+    thumbnail: img8,
+    images: [img81, img82, img83],
+    techs: [
+      BiLogoTypescript,
+      RiReactjsFill,
+      RiTailwindCssFill,
+      IoLogoElectron,
+      RiNodejsLine,
+      SiMysql,
+    ],
   },
 ];
