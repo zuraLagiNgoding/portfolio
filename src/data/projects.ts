@@ -7,10 +7,6 @@ import img22 from "../img/projects/22.png";
 import img23 from "../img/projects/23.png";
 import img24 from "../img/projects/24.png";
 import img25 from "../img/projects/25.png";
-import img3 from "../img/projects/3.png";
-import img31 from "../img/projects/31.png";
-import img32 from "../img/projects/32.png";
-import img33 from "../img/projects/33.png";
 import img4 from "../img/projects/4.png";
 import img41 from "../img/projects/41.png";
 import img42 from "../img/projects/42.png";
@@ -24,6 +20,17 @@ import img8 from "../img/projects/8.png";
 import img81 from "../img/projects/81.png";
 import img82 from "../img/projects/82.png";
 import img83 from "../img/projects/83.png";
+import img9 from "../img/projects/9.png";
+import img91 from "../img/projects/91.png";
+import img92 from "../img/projects/92.png";
+import img93 from "../img/projects/93.png";
+import img10 from "../img/projects/10.png";
+import img101 from "../img/projects/101.png";
+import img102 from "../img/projects/102.png";
+import img103 from "../img/projects/103.png";
+import img104 from "../img/projects/104.png";
+import img105 from "../img/projects/105.png";
+
 import { BiLogoTypescript } from "react-icons/bi";
 import {
   RiJavascriptFill,
@@ -61,15 +68,15 @@ export const projects = [
     ],
     source_code: "https://github.com/zuraLagiNgoding/react-student-attendance",
   },
-  {
-    id: 3,
-    title: "PT. Manunggal Teknik Persada Company Profile",
-    description:
-      "PT. Manunggal Teknik Persada specializes in manufacturing supplies and construction consulting. With a focus on quality and precision, the company also offers professional maintenance and repair services, catering to diverse industrial and construction needs.",
-    thumbnail: img3,
-    images: [img31, img32, img33],
-    techs: [RiJavascriptFill, RiReactjsFill, RiTailwindCssFill],
-  },
+  // {
+  //   id: 3,
+  //   title: "PT. Manunggal Teknik Persada Company Profile",
+  //   description:
+  //     "PT. Manunggal Teknik Persada specializes in manufacturing supplies and construction consulting. With a focus on quality and precision, the company also offers professional maintenance and repair services, catering to diverse industrial and construction needs.",
+  //   thumbnail: img3,
+  //   images: [img31, img32, img33],
+  //   techs: [RiJavascriptFill, RiReactjsFill, RiTailwindCssFill],
+  // },
   {
     id: 4,
     title: "FIEMS ",
@@ -119,5 +126,23 @@ export const projects = [
       RiNodejsLine,
       SiMysql,
     ],
+  },
+  {
+    id: 7,
+    title: "CMM Hospital System",
+    description:
+      "CMM Hospital System is a web application designed to monitor and manage hospital room and bed assignments in real time. It helps medical and administrative staff track room availability, patient status, and doctor activities through an intuitive and informative dashboard. With its interactive interface and structured workflow, the system enhances operational efficiency and accuracy in hospital data management.",
+    thumbnail: img9,
+    images: [img91, img92, img93],
+    techs: [BiLogoTypescript, RiReactjsFill, RiTailwindCssFill],
+  },
+  {
+    id: 8,
+    title: "Retail Management System",
+    description:
+      "This project is a web application designed to streamline daily retail operations. It provides comprehensive tools for managing inventory, sales, purchases, orders, and financial reports. Equipped with an interactive dashboard to monitor cashflow, product performance, and operational activities in real time, this system enables business owners to make faster, data-driven decisions with improved accuracy and efficiency.",
+    thumbnail: img10,
+    images: [img101, img102, img103, img104, img105],
+    techs: [BiLogoTypescript, RiReactjsFill, RiTailwindCssFill],
   },
 ];

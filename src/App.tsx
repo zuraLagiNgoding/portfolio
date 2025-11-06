@@ -78,7 +78,7 @@ function App() {
       <div
         className={clsx(
           "fixed flex flex-col p-8 h-screen max-h-screen overflow-auto sm:w-2/5 w-full bg-white right-0 transition-transform duration-1000 shadow-2xl z-50 space-y-8",
-          !selectedProject && "translate-x-[100rem]"
+          !selectedProject && "translate-x-[100rem]",
         )}
       >
         <div className="w-full flex justify-end">
@@ -124,7 +124,7 @@ function App() {
             <a href="https://github.com/zuraLagiNgoding/">
               <Github size={20} />
             </a>
-            <a href="https://www.instagram.com/z.zuraaa_/">
+            <a href="https://www.instagram.com/azyura.azis/">
               <Instagram size={20} />
             </a>
             <Discord
@@ -151,9 +151,9 @@ function App() {
             variants={fade}
             initial={{ opacity: 0, y: 40, filter: "blur(20px)" }}
             whileInView="animate"
-            className="md:w-full flex justify-end md:mb-[15rem] text-6xl md:text-6xl xl:text-8xl font-medium "
+            className="md:w-full flex justify-between md:mb-[15rem] text-6xl md:text-6xl xl:text-8xl font-medium "
           >
-            <h1>Fullstack Developer</h1>
+            <h1>Web Developer</h1>
           </motion.div>
           <motion.div
             variants={fade}
@@ -339,7 +339,7 @@ function App() {
               <a href="https://github.com/zuraLagiNgoding/">
                 <Github size={20} />
               </a>
-              <a href="https://www.instagram.com/z.zuraaa_/">
+              <a href="https://www.instagram.com/azyura.azis//">
                 <Instagram size={20} />
               </a>
               <Discord
